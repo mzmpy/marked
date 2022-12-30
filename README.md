@@ -16,6 +16,12 @@
 - ⚖️ light-weight while implementing all markdown features from the supported flavors & specifications
 - 🌐 works in a browser, on a server, or from a command line interface (CLI)
 
+## Statement
+
+This is a project that fork from [marked](https://github.com/markedjs/marked). [Katex](https://github.com/KaTeX/KaTeX) 
+is be introduced into it for supporting rendering latex. User should be noticed that the package is not be tested for the 
+part of using katex. So it should be only used for individual purpose.
+
 ## Demo
 
 Checkout the [demo page](https://marked.js.org/demo/) to see marked in action ⛹️

@@ -3,6 +3,7 @@ import {
   cleanUrl,
   escape
 } from './helpers.js';
+import katex from 'katex';
 
 /**
  * Renderer
@@ -14,6 +15,14 @@ export class Renderer {
 
   code(code, infostring, escaped) {
     const lang = (infostring || '').match(/\S*/)[0];
+    if (lang === 'latex') {
+      // <pre> should be relative positioning for the reason that
+      // there are absolute-positioning elements in html redered
+      // by katex.
+      return '<pre style=\"position: relative;\">' + katex.renderToString(code.trim(), {
+        throwOnError: false
+      }) + '</pre>\n';
+    }
     if (this.options.highlight) {
       const out = this.options.highlight(code, lang);
       if (out != null && out !== code) {
@@ -146,7 +155,12 @@ export class Renderer {
    * @param {string} text
    */
   codespan(text) {
-    return `<code>${text}</code>`;
+    const match = text.match(/^\$(.+)\$$/);
+    return match
+      ? '<code>' + katex.renderToString(match[1], {
+        throwOnError: false
+      }) + '</code>'
+      : '<code>' + text + '</code>';
   }
 
   br() {

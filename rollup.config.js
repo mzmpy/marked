@@ -1,4 +1,5 @@
 import babel from '@rollup/plugin-babel';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 const banner = `/**
  * marked - a markdown parser
@@ -18,7 +19,10 @@ export default [{
     file: 'lib/marked.esm.js',
     format: 'esm',
     banner
-  }
+  },
+  plugins: [
+    nodeResolve()
+  ]
 },
 {
   input: 'src/marked.js',
@@ -31,7 +35,8 @@ export default [{
   plugins: [
     babel({
       presets: [['@babel/preset-env', { loose: true }]]
-    })
+    }),
+    nodeResolve()
   ]
 },
 {
@@ -45,6 +50,7 @@ export default [{
   plugins: [
     babel({
       presets: [['@babel/preset-env', { loose: true }]]
-    })
+    }),
+    nodeResolve()
   ]
 }];

@@ -1,8 +1,8 @@
 {
-  "name": "marked",
-  "description": "A markdown parser built for speed",
-  "author": "Christopher Jeffrey",
-  "version": "4.2.5",
+  "name": "@npmzm/marked",
+  "description": "A markdown parser built for speed and supported latex syntax",
+  "author": "@npmzm(original for Christopher Jeffrey)",
+  "version": "1.0.3",
   "type": "module",
   "main": "./lib/marked.cjs",
   "module": "./lib/marked.esm.js",
@@ -26,10 +26,10 @@
     "./bin/marked": "./bin/marked.js",
     "./package.json": "./package.json"
   },
-  "repository": "git://github.com/markedjs/marked.git",
+  "repository": "git://github.com/mzmpy/marked.git",
   "homepage": "https://marked.js.org",
   "bugs": {
-    "url": "http://github.com/markedjs/marked/issues"
+    "url": "http://github.com/mzmpy/marked/issues"
   },
   "license": "MIT",
   "keywords": [
@@ -47,6 +47,7 @@
     "@babel/preset-env": "^7.20.2",
     "@markedjs/html-differ": "^4.0.2",
     "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.7",
@@ -90,5 +91,8 @@
   },
   "engines": {
     "node": ">= 12"
+  },
+  "dependencies": {
+    "katex": "^0.16.4"
   }
 }
