@@ -2,7 +2,7 @@
   "name": "@npmzm/marked",
   "description": "A markdown parser built for speed and supported latex syntax",
   "author": "@npmzm(original for Christopher Jeffrey)",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "./lib/marked.cjs",
   "module": "./lib/marked.esm.js",
