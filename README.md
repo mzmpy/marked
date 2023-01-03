@@ -100,6 +100,13 @@ $ marked --help
 </html>
 ```
 
+**Used to render Latex(should used with bundler like webpack concurrently)**
+```javascript
+import { marked } from '@npmzm/marked'
+
+const html = marked('There are some Greek letter `$\alpha$`, `$\beta$` and `$\lambda$`.\n\n```latex\nE = mc^{2}\n```')
+```
+
 ## License
 
 Copyright (c) 2011-2022, Christopher Jeffrey. (MIT License)
