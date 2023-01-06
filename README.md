@@ -103,6 +103,7 @@ $ marked --help
 **Used to render Latex(should used with bundler like webpack concurrently)**
 ```javascript
 import { marked } from '@npmzm/marked'
+import 'katex/dist/katex.css'
 
 const html = marked('There are some Greek letter `$\alpha$`, `$\beta$` and `$\lambda$`.\n\n```latex\nE = mc^{2}\n```')
 ```
