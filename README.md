@@ -100,15 +100,15 @@ $ marked --help
 </html>
 ```
 
-**Used to render Latex(should used with bundler like webpack concurrently)**
+**Used to render katex(should used with bundler like webpack concurrently)**
 ```javascript
 import { marked } from '@npmzm/marked'
 import 'katex/dist/katex.css'
 
-const html = marked('There are some Greek letter `$\alpha$`, `$\beta$` and `$\lambda$`.\n\n```latex\nE = mc^{2}\n```')
+const html = marked('There are some Greek letter `$\alpha$`, `$\beta$` and `$\lambda$`.\n\n```katex\nE = mc^{2}\n```')
 ```
 
-**Used to render Latex in browser**
+**Used to render katex in browser**
 ```html
 <!doctype html>
 <html>
@@ -123,7 +123,7 @@ const html = marked('There are some Greek letter `$\alpha$`, `$\beta$` and `$\la
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.js" integrity="sha384-tsPOhveNsi36uhglzMBNOAA2xd7LlEqQuQHFKi4DwP+6UKrrLGub1MD77Zx18F8e" crossorigin="anonymous"></script>
   <script type="text/javascript" src="./marked/marked.min.js"></script>
   <script type="text/javascript">
-    document.getElementById('content').innerHTML = marked.marked('There are some Greek letter \`\$\\alpha\$\`, \`\$\\beta\$\` and \`\$\\lambda\$\`.\n\n\`\`\`latex\nE = mc^{2}\n\`\`\`')
+    document.getElementById('content').innerHTML = marked.marked('There are some Greek letter \`\$\\alpha\$\`, \`\$\\beta\$\` and \`\$\\lambda\$\`.\n\n\`\`\`katex\nE = mc^{2}\n\`\`\`')
   </script>
 </html>
 ```
